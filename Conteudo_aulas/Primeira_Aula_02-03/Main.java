@@ -1,3 +1,5 @@
+import exercicio01.Pedido;
+
 public class Main {
     public static void main(String[] args) {
         Pedido pedidoPf = new Pedido(100, "PF", "avista");
