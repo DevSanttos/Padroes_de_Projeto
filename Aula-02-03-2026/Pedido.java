@@ -4,6 +4,12 @@ public class Pedido {
     private String tipoCliente; // "PF" ou "PJ"
     private String formaPagamento; // "avista" ou "parcelado"
 
+    public Pedido(double valorBase, String tipoCliente, String formaPagamento) {
+        this.valorBase = valorBase;
+        this.tipoCliente = tipoCliente;
+        this.formaPagamento = formaPagamento;
+    }
+
     public double calcularValorFinal() {
         double valor = valorBase;
 

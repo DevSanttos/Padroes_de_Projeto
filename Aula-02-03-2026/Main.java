@@ -1,7 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        Pedido pedido1 = new Pedido();
+        Pedido pedidoPf = new Pedido(100, "PF", "avista");
+        Pedido pedidoPj = new Pedido(100, "PJ", "avista");
 
-        pedido1.calcularValorFinal()
+        System.out.println(pedidoPf.calcularValorFinal());
+        System.out.println(pedidoPj.calcularValorFinal());
     }
 }
