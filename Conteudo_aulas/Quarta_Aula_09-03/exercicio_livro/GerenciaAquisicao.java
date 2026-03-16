@@ -5,28 +5,25 @@ public class GerenciaAquisicao {
 	private String fornecedor;
 	
 	private String notaFiscal;
-	private String tipoAquisicao; // Compra, Doacao, Permuta
     private Livro livro;
 
     public GerenciaAquisicao(String fornecedor, String notaFiscal, String tipoAquisicao) {
         this.fornecedor = fornecedor;
         this.notaFiscal = notaFiscal;
-        this.tipoAquisicao = tipoAquisicao;
     }
 
-    public void registrarAquisicao(String fornecedor, double preco, String notaFiscal, String tipo, Livro livro) {
+    public void registrarAquisicao(String fornecedor, double preco, String notaFiscal, Livro livro) {
 		this.fornecedor = fornecedor;
 		livro.setPrecoCompra(preco);
 		this.notaFiscal = notaFiscal;
-		this.tipoAquisicao = tipo;
 		this.livro.setDataAquisicao(new Date());
 
 		// Aplicar depreciacao inicial
-		if ("Compra".equals(tipo)) {
+		if ("Compra".equals(livro.getTipoAquisicao())) {
 			if (preco > 100) {
 				System.out.println("Livro de alto valor - necessidade de seguro");
 			}
-		} else if ("Doacao".equals(tipo)) {
+		} else if ("Doacao".equals(livro.getTipoAquisicao())) {
 			validarDoacao();
 		}
 	}
@@ -56,13 +53,5 @@ public class GerenciaAquisicao {
 
     public void setNotaFiscal(String notaFiscal) {
         this.notaFiscal = notaFiscal;
-    }
-
-    public String getTipoAquisicao() {
-        return tipoAquisicao;
-    }
-
-    public void setTipoAquisicao(String tipoAquisicao) {
-        this.tipoAquisicao = tipoAquisicao;
     }
 }

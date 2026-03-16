@@ -18,7 +18,6 @@ class Emprestimo {
 		this.dataPrevista.setDate(dataEmprestimo.getDate() + 14); // 14 dias padrao
 	}
 
-	// Getters e setters
 	public String getMatricula() {
 		return matricula;
 	}
@@ -55,11 +54,4 @@ class Emprestimo {
 	public String getNomeUsuario() {
 		return nomeUsuario;
 	}
-
-    @Override
-    public String toString() {
-        return "Emprestimo [nomeUsuario=" + nomeUsuario + ", matricula=" + matricula + ", dataEmprestimo="
-                + dataEmprestimo + ", dataPrevista=" + dataPrevista + ", dataDevolucao=" + dataDevolucao
-                + ", renovacoes=" + renovacoes + "]";
-    }
 }

@@ -138,11 +138,4 @@ public class GerenciaEmprestimo {
     public void setHistoricoEmprestimos(List<Emprestimo> historicoEmprestimos) {
         this.historicoEmprestimos = historicoEmprestimos;
     }
-
-    @Override
-    public String toString() {
-        return "GerenciaEmprestimo [disponivel=" + ", totalEmprestimos=" + totalEmprestimos
-                + ", dataUltimoEmprestimo=" + dataUltimoEmprestimo + ", historicoEmprestimos=" + historicoEmprestimos
-                + "]";
-    }
 }

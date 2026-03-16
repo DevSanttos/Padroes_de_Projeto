@@ -62,6 +62,4 @@ public class AnalisaConservacaoLivro {
     public void setLivro(Livro livro) {
         this.livro = livro;
     }
-
-
 }

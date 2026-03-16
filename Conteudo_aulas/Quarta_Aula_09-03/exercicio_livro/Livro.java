@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -16,8 +15,9 @@ public class Livro {
     private String estadoConservacao; // Novo, Bom, Regular, Danificado
     private Date dataAquisicao;
     private double precoCompra;
+    private String tipoAquisicao; // Compra, Doacao, Permuta
 
-	public Livro(String isbn, String titulo, String autor, List<String> categorias, boolean disponivel, String localizacaoFisica, String estadoConservacao, Date dataAquisicao, double precoCompra) {
+	public Livro(String isbn, String titulo, String autor, List<String> categorias, boolean disponivel, String localizacaoFisica, String estadoConservacao, Date dataAquisicao, double precoCompra, String tipoAquisicao) {
 		this.isbn = isbn;
 		this.titulo = titulo;
 		this.autor = autor;
@@ -27,10 +27,7 @@ public class Livro {
         this.estadoConservacao = estadoConservacao;
         this.dataAquisicao = dataAquisicao;
         this.precoCompra = precoCompra;
-		// this.palavrasChave = new ArrayList<>();
-		// this.historicoEmprestimos = new ArrayList<>();
-		// this.disponivel = true;
-		// this.totalEmprestimos = 0;
+        this.tipoAquisicao = tipoAquisicao;
 	}
 
     public String getLocalizacaoFisica() {
@@ -136,4 +133,12 @@ public class Livro {
     public void setPrecoCompra(double precoCompra) {
         this.precoCompra = precoCompra;
     }    
+
+    public String getTipoAquisicao() {
+        return tipoAquisicao;
+    }
+
+    public void setTipoAquisicao(String tipoAquisicao) {
+        this.tipoAquisicao = tipoAquisicao;
+    }
 }
