@@ -24,8 +24,4 @@ public class ItemPedido {
 	public double getPcoUnitario() {
 		return pcoUnitario;
 	}
-	
-	
-	
-	
 }

@@ -1,10 +1,15 @@
 package strategy1.pedido;
 import java.util.ArrayList;
 import java.util.List;
-
 import strategy1.strategy.CalculoFrete;
 
 public class PedidoV2 {
+
+	private CalculoFrete frete;
+
+	public PedidoV2(CalculoFrete calculoFrete) {
+		this.frete = calculoFrete;
+	}
 
 	public double calcularFrete() throws Exception {
 		return frete.calcular(this);
@@ -19,16 +24,8 @@ public class PedidoV2 {
 	public List<ItemPedido> getItensPedido() {
 		return itensPedido;
 	}
-	 
-	private CalculoFrete frete;
-	
-	public PedidoV2(CalculoFrete calculoFrete) {
-		this.frete = calculoFrete;
-	}
 
 	public CalculoFrete getCalculoFrete() {
 		return frete;
 	}
-
-
 }

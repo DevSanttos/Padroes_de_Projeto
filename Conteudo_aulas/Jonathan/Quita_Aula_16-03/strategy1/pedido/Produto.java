@@ -24,7 +24,4 @@ public class Produto {
 	public double getDimensoes() {
 		return dimensoes;
 	}
-	
-	
-	
 }

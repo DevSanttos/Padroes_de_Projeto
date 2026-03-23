@@ -1,13 +1,12 @@
 package strategy1.pedido;
 import java.util.ArrayList;
 import java.util.List;
-
 import strategy1.strategy.EFrete;
 
 public class PedidoV1 {
 
 	public double calcularFrete() throws Exception {
-		
+		// Utilização do padrão Strategy, uma vez que temos vários condicionais aninhados.
 		switch (frete) {
 			case EFrete.SEDEX : 
 				double total = 0;
@@ -52,6 +51,4 @@ public class PedidoV1 {
 	public EFrete getFrete() {
 		return frete;
 	}
-	
-	
 }
