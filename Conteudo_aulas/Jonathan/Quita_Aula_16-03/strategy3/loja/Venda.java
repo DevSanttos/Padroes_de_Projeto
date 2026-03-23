@@ -6,7 +6,12 @@ import java.util.List;
 public class Venda {
 
 	private List<ItemVenda> itens = new ArrayList<>();
-	
+	private ValidaDesconto estrategiaDesconto;
+
+    public Venda(ValidaDesconto estrategiaDesconto) {
+        this.estrategiaDesconto = estrategiaDesconto;
+    }
+
 	public void add(ItemVenda item) {
 		itens.add(item);
 	}
@@ -19,7 +24,7 @@ public class Venda {
 	}
 	
 	public double getValorTotalAPagar() {
-		return getValorTotalBruto();
+		return estrategiaDesconto.aplicarDesconto(this);
 	}
 
 	public double pagar() {

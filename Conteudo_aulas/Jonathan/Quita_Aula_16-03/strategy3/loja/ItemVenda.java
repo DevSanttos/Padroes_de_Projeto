@@ -14,12 +14,15 @@ public class ItemVenda {
 	public double getPrecoUnit() {
 		return precoUnit;
 	}
+
 	public void setPrecoUnit(double precoUnit) {
 		this.precoUnit = precoUnit;
 	}
+
 	public double getQtdade() {
 		return qtdade;
 	}
+	
 	public void setQtdade(double qtdade) {
 		this.qtdade = qtdade;
 	}
